@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  creator_name: MyString
+  del_passwd: MyString
+
+two:
+  title: MyString
+  creator_name: MyString
+  del_passwd: MyString

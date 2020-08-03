@@ -1,0 +1,29 @@
+<%= form_for([@board,@messages]) do |f| %>
+    <% if @messages.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@messages.errors.count, "error") %> prohibited this board from being saved:</h2>
+   
+        <ul>
+        <% @messages.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+   
+    <div class="field">
+      <%= f.label :creator_name %><br>
+      <%= f.text_field :creator_name %>
+    </div>
+    <div class="field">
+      <%= f.label :message %><br>
+      <%= f.text_area :message %>
+    </div>
+    <div class="field">
+      <%= f.label :del_passwd %><br>
+      <%= f.password_field :del_passwd %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>

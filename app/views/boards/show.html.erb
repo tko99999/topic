@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @board.title %>
+</p>
+
+<p>
+  <strong>Creator name:</strong>
+  <%= @board.creator_name %>
+</p>
+
+<p>
+  <strong>Del passwd:</strong>
+  <%= @board.del_passwd %>
+</p>
+
+<%= link_to 'Edit', edit_board_path(@board) %> |
+<%= link_to 'Back', boards_path %>
