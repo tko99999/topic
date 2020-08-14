@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :sns_credentials, dependent: :destroy
@@ -51,5 +52,12 @@ class User < ApplicationRecord
             sns = without_sns_data(auth)[:sns]
           end
           return { user: user ,sns: sns}
+          
+
+          
         end
+
+        def self.create_unique_string
+          "dummy"
+         end
 end
